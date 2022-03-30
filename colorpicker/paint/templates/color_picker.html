@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <title>Color Picker App</title>
+    </head>
+    <body style="background-color: rgb({{ red }}, {{ green}}, {{ blue}})"> 
+        <h2>Enter an integer between 0 and 255 for each of the colors below please: </h2>
+        <form method = "POST" action="{% url 'paint' %}">
+            {% csrf_token %}
+
+            {{ form.red_amount.label_tag }}
+            {{ form.red_amount }}
+
+            {{ form.green_amount.label_tag }}
+            {{ form.green_amount }}
+
+            {{ form.blue_amount.label_tag }}
+            {{ form.blue_amount }}
+
+            <div></div>
+            <br>
+            
+
+            <button type="submit">
+                Paint!
+            </button>
+
+
+
+        </form>
+        
+
+    </body>
+
+</html>

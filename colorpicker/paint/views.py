@@ -21,8 +21,8 @@ class ColorPickerView(View):
         )
     def post(self,request):
         red = int(request.POST['red_amount'])
-        green = int(request.POST['red_amount'])
-        blue = int(request.POST['red_amount'])
+        green = int(request.POST['green_amount'])
+        blue = int(request.POST['blue_amount'])
 
         form = ColorPickerForm()
 
